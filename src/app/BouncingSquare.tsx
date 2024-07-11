@@ -11,7 +11,7 @@ import Animated, {
 
 const SquareSize = 120;
 
-export default function BouncingSquare() {
+const BouncingSquare = () => {
   const scale = useSharedValue(1);
   const rotate = useSharedValue(0);
 
@@ -67,7 +67,7 @@ export default function BouncingSquare() {
       </TouchableOpacity>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -95,3 +95,5 @@ const styles = StyleSheet.create({
     borderCurve: 'continuous',
   },
 });
+
+export default BouncingSquare;
