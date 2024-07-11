@@ -21,6 +21,7 @@ const BouncingSquare = () => {
 
   const rStyle = useAnimatedStyle(() => {
     return {
+      //ORDER IS VERY IMPORTANT!: translate before rotating
       transform: [
         { translateX: translateX.value },
         { translateY: translateY.value },

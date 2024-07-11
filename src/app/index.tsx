@@ -1,13 +1,16 @@
 import { Link } from 'expo-router';
 
+import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function Page() {
   return (
     <View style={styles.container}>
       <View style={styles.main}>
+        <StatusBar style="auto" />
         <Text style={styles.title}>Reanimate</Text>
         <Link href={'/BouncingSquare'}>Bouncing Square</Link>
+        <Link href={'/PanGestureHandler'}>PanGestureHandler</Link>
       </View>
     </View>
   );
@@ -28,9 +31,5 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 64,
     fontWeight: 'bold',
-  },
-  subtitle: {
-    fontSize: 36,
-    color: '#38434D',
   },
 });
