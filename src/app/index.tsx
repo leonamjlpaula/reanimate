@@ -11,6 +11,7 @@ export default function Page() {
         <Text style={styles.title}>Reanimate</Text>
         <Link href={'/BouncingSquare'}>Bouncing Square</Link>
         <Link href={'/PanGestureHandler'}>PanGestureHandler</Link>
+        <Link href={'/SpaticalTapGesture'}>SpaticalTapGesture</Link>
       </View>
     </View>
   );
