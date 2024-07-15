@@ -12,6 +12,7 @@ export default function Page() {
         <Link href={'/BouncingSquare'}>Bouncing Square</Link>
         <Link href={'/PanGestureHandler'}>PanGestureHandler</Link>
         <Link href={'/SpaticalTapGesture'}>SpaticalTapGesture</Link>
+        <Link href={'/ParallaxAnimation'}>ParallaxAnimation</Link>
       </View>
     </View>
   );
