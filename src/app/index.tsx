@@ -13,6 +13,7 @@ export default function Page() {
         <Link href={'/PanGestureHandler'}>PanGestureHandler</Link>
         <Link href={'/SpaticalTapGesture'}>SpaticalTapGesture</Link>
         <Link href={'/ParallaxAnimation'}>ParallaxAnimation</Link>
+        <Link href={'/AnimatedText'}>AnimatedText</Link>
       </View>
     </View>
   );
