@@ -6,7 +6,6 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 
 import 'react-native-reanimated';
-import Page from '.';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -16,9 +15,14 @@ export {
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
+export const unstable_settings = {
+  // Ensure any route can link back to `/`
+  initialRouteName: 'Home',
+};
+
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    SpaceMono: require('../assets/SF-Pro-Rounded-Bold.ttf'),
+    SFProRoundedBold: require('../assets/SF-Pro-Rounded-Bold.ttf'),
     ...FontAwesome.font,
   });
 
@@ -39,7 +43,7 @@ export default function RootLayout() {
 
   return (
     <Stack>
-      <Page />
+      <Stack.Screen name="index" />
     </Stack>
   );
 }

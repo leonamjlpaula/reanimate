@@ -3,7 +3,7 @@ import { Link } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function Page() {
+export default function Home() {
   return (
     <View style={styles.container}>
       <View style={styles.main}>
@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 64,
+    fontFamily: 'SF-Pro-Rounded-Bold',
     fontWeight: 'bold',
   },
 });

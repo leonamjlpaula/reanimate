@@ -1,18 +1,28 @@
 import { FontAwesome } from '@expo/vector-icons';
 
-import { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import {
+  useDerivedValue,
+  useSharedValue,
+  withTiming,
+} from 'react-native-reanimated';
+import { ReText } from 'react-native-redash';
 
 const AnimatedText = () => {
-  const [count, setCount] = useState(100);
+  const count = useSharedValue(0);
 
   const randomCount = () => {
-    setCount(Math.floor(Math.random() * 100 + 1));
+    const nextCount = withTiming(Math.random() * 100 + 1, { duration: 1000 });
+    count.value = nextCount;
   };
+
+  const countString = useDerivedValue(() => {
+    return Math.floor(count.value).toString();
+  });
 
   return (
     <View style={styles.container}>
-      <Text style={styles.count}>{count}</Text>
+      <ReText style={styles.count} text={countString} />
       <TouchableOpacity onPress={randomCount} style={styles.floatingButton}>
         <FontAwesome name="random" size={24} color="white" />
       </TouchableOpacity>
@@ -37,7 +47,9 @@ const styles = StyleSheet.create({
   count: {
     fontSize: 80,
     fontWeight: 'bold',
-    fontFamily: 'SF-Pro-Rounded-Bold',
+    fontFamily: 'SFProRoundedBold',
+    width: 200,
+    textAlign: 'center',
   },
 });
 
