@@ -1,6 +1,7 @@
 import { FontAwesome } from '@expo/vector-icons';
 
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import AnimateableText from 'react-native-animateable-text';
 import {
   useDerivedValue,
   useSharedValue,
@@ -23,6 +24,7 @@ const AnimatedText = () => {
   return (
     <View style={styles.container}>
       <ReText style={styles.count} text={countString} />
+      {/* <AnimateableText style={styles.count} text={countString} /> */}
       <TouchableOpacity onPress={randomCount} style={styles.floatingButton}>
         <FontAwesome name="random" size={24} color="white" />
       </TouchableOpacity>
