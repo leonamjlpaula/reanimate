@@ -14,6 +14,7 @@ export default function Home() {
         <Link href={'/SpaticalTapGesture'}>SpaticalTapGesture</Link>
         <Link href={'/ParallaxAnimation'}>ParallaxAnimation</Link>
         <Link href={'/AnimatedText'}>AnimatedText</Link>
+        <Link href={'/ScrollablePercentage'}>ScrollablePercentage</Link>
       </View>
     </View>
   );
