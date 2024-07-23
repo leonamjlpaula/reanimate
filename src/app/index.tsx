@@ -15,6 +15,10 @@ export default function Home() {
         <Link href={'/ParallaxAnimation'}>ParallaxAnimation</Link>
         <Link href={'/AnimatedText'}>AnimatedText</Link>
         <Link href={'/ScrollablePercentage'}>ScrollablePercentage</Link>
+        <Link href={'/LayoutAnimationsEnteringExiting'}>
+          LayoutAnimationsEnteringExiting
+        </Link>
+        <Link href={'/LayoutAnimationsLists'}>LayoutAnimationsLists</Link>
       </View>
     </View>
   );
