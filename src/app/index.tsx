@@ -19,6 +19,7 @@ export default function Home() {
           LayoutAnimationsEnteringExiting
         </Link>
         <Link href={'/LayoutAnimationsLists'}>LayoutAnimationsLists</Link>
+        <Link href={'/FamilyNumberInput'}>FamilyNumberInput</Link>
       </View>
     </View>
   );
